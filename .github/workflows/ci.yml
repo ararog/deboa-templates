@@ -12,27 +12,10 @@ jobs:
       matrix:
         template:
           - simple
-          - simple-async
-          - component
         include:
-          - template: hello-world
-            project_name: ratatui-github-example
-            arguments: "--define=project-description=example"
           - template: simple
             project_name: ratatui-github-example
             arguments: "--define=project-description=example"
-          - template: simple-async
-            project_name: ratatui-github-example
-            arguments: "--define=project-description=example"
-          - template: event-driven
-            project_name: ratatui-github-example
-            arguments: "--define=project-description=example"
-          - template: event-driven-async
-            project_name: ratatui-github-example
-            arguments: "--define=project-description=example"
-          - template: component
-            project_name: ratatui-github-example
-            arguments: "--define=gh-username=ratatui --define=project-description=example --define=use-gitserver=false"
     env:
       PROJECT_NAME: ${{ matrix.project_name }}
     steps:
