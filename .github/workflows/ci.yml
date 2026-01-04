@@ -14,7 +14,7 @@ jobs:
           - simple
         include:
           - template: simple
-            project_name: ratatui-github-example
+            project_name: deboa-github-example
             arguments: "--define=project-description=example"
     env:
       PROJECT_NAME: ${{ matrix.project_name }}
